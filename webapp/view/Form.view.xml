@@ -1,0 +1,39 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:tnt="sap.tnt" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form"
+	xmlns="sap.m" controllerName="z_tanyaz_tanya.controller.Form" xmlns:html="http://www.w3.org/1999/xhtml">
+	<App>
+		<pages>
+			<Page title="Visitor's Form">
+				<content>
+					<tnt:ToolHeader>
+						<Button icon="sap-icon://nav-back" type="Accept" press="onClickToDashboard"/>
+					</tnt:ToolHeader>
+					<VBox>
+						<f:SimpleForm id="SimpleForm" editable="true" layout="ResponsiveGridLayout" title="Add your details" labelSpanXL="3" labelSpanL="3"
+							labelSpanM="3" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0" columnsXL="1"
+							columnsL="1" columnsM="1" singleContainerFullSize="false">
+							<f:content>
+								<Label text="Visitor Name" required="true"/>
+								<Input id="vname"></Input>
+								<Label text="Company Name" required="true"/>
+								<Input id="cname"/>
+								<Label text="Mobile Number" required="true"/>
+								<Input id="mnum" type="Number"/>
+								<Label text="Department" required="true"/>
+								<Input id="dep"/>
+								<Label text="Email"/>
+								<Input id="email" type="Email"/>
+							</f:content>
+						</f:SimpleForm>
+						<tnt:ToolHeader>
+							<ToolbarSpacer/>
+							<Button icon="sap-icon://complete" text="Save" type="Accept" class="sapUiSmallMargin" press="savebtn" width="100px"/>
+							<Button icon="sap-icon://decline" text="cancel" type="Reject" class="sapUiSmallMargin" press="cancelbtn" width="100px"/>
+							<Button id="saveButton" text="Save" type="Transparent" press="onSave" visible="false"/>
+							<Button id="cancelButton" text="Cancel" type="Transparent" press="onCancelling" visible="false"/>
+						</tnt:ToolHeader>
+					</VBox>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

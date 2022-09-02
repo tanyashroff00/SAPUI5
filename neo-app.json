@@ -6,6 +6,7 @@
       "target": {
         "type": "service",
         "name": "sapui5",
+<<<<<<< HEAD
         "entryPath": "/resources",
         "version": "1.52.13"
       },
@@ -20,6 +21,29 @@
         "version": "1.52.13"
       },
       "description": "SAPUI5 Test Resources"
+=======
+        "entryPath": "/resources"
+      },
+      "description": "SAPUI5 Resources"
+    },
+    {
+      "path": "/test-resources",
+      "target": {
+        "type": "service",
+        "name": "sapui5",
+        "entryPath": "/test-resources"
+      },
+      "description": "SAPUI5 Test Resources"
+    },
+    {
+      "path": "/sap/opu/odata",
+      "target": {
+        "type": "destination",
+        "name": "S18",
+        "entryPath": "/sap/opu/odata"
+      },
+      "description": "S4HANA 1809 SP00 First 93 with 11"
+>>>>>>> branch 'main' of https://github.com/tanyashroff00/SAPUI5.git
     }
   ],
   "sendWelcomeFileRedirect": true

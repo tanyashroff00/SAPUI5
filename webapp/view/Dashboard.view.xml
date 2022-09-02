@@ -1,0 +1,63 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:tnt="sap.tnt"
+	controllerName="z_tanyaz_tanya.controller.Dashboard" xmlns:html="http://www.w3.org/1999/xhtml">
+	<App id="app">
+		<pages>
+			<Page title="Dashboard">
+				<content>
+					<tnt:ToolHeader>
+						<Button text="CLICK ME!!!!" icon="sap-icon://kpi-corporate-performance" press="onOpenDialog" type="Accept"/>
+						<Button text="Dashboard" icon="sap-icon://bbyd-dashboard" press="onClickDashboard" type="Accept"/>
+						<Button text="Manage Visitors" icon="sap-icon://business-objects-experience" press="onClickManageVisitors" type="Accept"/>
+						<Button text="Reports" icon="sap-icon://manager-insight" press="onClickReports" type="Accept"/>
+						<ToolbarSpacer/>
+						<SearchField width="30%" placeholder="Search for..." liveChange="onSearch"/>
+						<Button icon="sap-icon://add" type="Accept" press="onClickForm"/>
+					</tnt:ToolHeader>
+					<Table id="DataList" class="sapUiResponsiveContentPadding" headerText="Visitor's Count" inset="true" items="{path:'JsonDataModel>/' }">
+						<headerToolbar>
+							<OverflowToolbar>
+								<ToolbarSpacer/>
+								<Button icon="sap-icon://sort" type="Accept" press="onSorting"/>
+								<Button icon="sap-icon://group-2" type="Accept" press="onGrouping"/>
+							</OverflowToolbar>
+						</headerToolbar>
+						<columns>
+							<Column width="12em">
+								<Text text="Visitor Name"/>
+							</Column>
+							<Column width="12em">
+								<Text text="Company Name"/>
+							</Column>
+							<Column width="12em">
+								<Text text="Mobile Number"/>
+							</Column>
+							<Column width="12em">
+								<Text text="Department"/>
+							</Column>
+							<Column width="12em">
+								<Text text="Email"/>
+							</Column>
+							<Column minScreenWidth="Tablet" demandPopin="true" width="5em" hAlign="Left"><Text/></Column>
+							<Column minScreenWidth="Tablet" demandPopin="true" width="5em" hAlign="Center"><Text/></Column>
+							<Column minScreenWidth="Tablet" demandPopin="true" width="5em" hAlign="Right"><Text/></Column>
+						</columns>
+						<items>
+							<ColumnListItem press="ONNAVTO" type="Navigation">
+								<cells>
+									<Text text="{JsonDataModel>Name}"/>
+									<Text text="{JsonDataModel>CompName}"/>
+									<Text text="{JsonDataModel>MobileNo}"/>
+									<Text text="{JsonDataModel>Dept}"/>
+									<Text text="{JsonDataModel>Email}"/>
+									<Button icon="sap-icon://print" press="onClickPrint"/>
+									<Button icon="sap-icon://create-form" press="onClickNewForm"/>
+									<Button icon="sap-icon://journey-depart" press="onClickCheckout"/>
+								</cells>
+							</ColumnListItem>
+						</items>
+					</Table>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
